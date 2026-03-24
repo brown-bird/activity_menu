@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Boise — Activity Menu</title>
+  <meta name="description" content="Your guide to adventures near and far, all starting from Boise, Idaho.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Site Header ──────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <div class="site-logo">
+        From Boise
+        <span>Activity Menu</span>
+      </div>
+      <nav class="site-nav" aria-label="Jump to section">
+        <a href="#one-to-three">1–3 Hrs</a>
+        <a href="#half-day">Half Day</a>
+        <a href="#full-day">Full Day</a>
+        <a href="#weekend">Weekend</a>
+        <a href="#three-day">3-Day</a>
+        <a href="#full-week">Full Week</a>
+        <a href="#annual-events">Annual Events</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <p class="hero-eyebrow">Starting from Boise, Idaho</p>
+    <h1>Your <em>Adventure</em><br>Awaits</h1>
+    <p class="hero-tagline">A curated guide to the best activities near and far — organized by how much time you have.</p>
+
+    <div class="ornament">✦</div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar" role="group" aria-label="Filter by category">
+      <button class="filter-pill active" data-filter="All">All</button>
+      <button class="filter-pill" data-filter="Birdwatching">🐦 Birdwatching</button>
+      <button class="filter-pill" data-filter="Walks">🌿 Walks</button>
+      <button class="filter-pill" data-filter="Theater & Shows">🎭 Theater & Shows</button>
+      <button class="filter-pill" data-filter="Day Trips">🗺️ Day Trips</button>
+      <button class="filter-pill" data-filter="Entertainment">🎵 Entertainment</button>
+      <button class="filter-pill" data-filter="Outdoors">🏔️ Outdoors</button>
+      <button class="filter-pill" data-filter="Wine & Food">🍷 Wine & Food</button>
+    </div>
+  </section>
+
+  <!-- ── I. 1–3 Hours ─────────────────────────────────────── -->
+  <section class="time-block" id="one-to-three" data-block="1-3 Hours">
+    <div class="section-header">
+      <span class="section-numeral">I</span>
+      <h2>1–3 Hours</h2>
+      <span class="section-subtitle">Quick local escapes</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── II. Half Day ──────────────────────────────────────── -->
+  <section class="time-block alt-bg" id="half-day" data-block="Half Day">
+    <div class="section-header">
+      <span class="section-numeral">II</span>
+      <h2>Half Day</h2>
+      <span class="section-subtitle">3–6 hours of adventure</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── III. Full Day ─────────────────────────────────────── -->
+  <section class="time-block" id="full-day" data-block="Full Day">
+    <div class="section-header">
+      <span class="section-numeral">III</span>
+      <h2>Full Day</h2>
+      <span class="section-subtitle">Make a day of it</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── IV. Weekend ──────────────────────────────────────── -->
+  <section class="time-block alt-bg" id="weekend" data-block="Weekend">
+    <div class="section-header">
+      <span class="section-numeral">IV</span>
+      <h2>Weekend</h2>
+      <span class="section-subtitle">Two days away</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── V. 3-Day Weekend ─────────────────────────────────── -->
+  <section class="time-block" id="three-day" data-block="3-Day Weekend">
+    <div class="section-header">
+      <span class="section-numeral">V</span>
+      <h2>3-Day Weekend</h2>
+      <span class="section-subtitle">A long weekend well spent</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── VI. Full Week ─────────────────────────────────────── -->
+  <section class="time-block alt-bg" id="full-week" data-block="Full Week">
+    <div class="section-header">
+      <span class="section-numeral">VI</span>
+      <h2>Full Week</h2>
+      <span class="section-subtitle">Pack your bags</span>
+      <div class="section-ornament">✦</div>
+    </div>
+    <div class="card-grid"></div>
+  </section>
+
+  <!-- ── Annual Events ────────────────────────────────────── -->
+  <section class="annual-section" id="annual-events">
+    <div class="annual-inner">
+      <div class="section-header">
+        <span class="section-numeral">✦</span>
+        <h2>Annual Events</h2>
+        <span class="section-subtitle">Mark your calendar</span>
+        <div class="section-ornament">✦</div>
+      </div>
+      <table class="events-table">
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Event</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="annual-events-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Footer ───────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <p>Made with love for Boise adventurers &nbsp;·&nbsp; <a href="https://github.com/" target="_blank" rel="noopener">View on GitHub</a></p>
+  </footer>
+
+  <!-- ── Detail Screen ────────────────────────────────────── -->
+  <div class="detail-screen" id="detail-screen" role="dialog" aria-modal="true" aria-label="Activity detail">
+    <div class="detail-header">
+      <button class="detail-back" id="detail-back" aria-label="Back to menu">← Back</button>
+      <span class="detail-header-title" id="detail-header-title"></span>
+    </div>
+    <div class="detail-hero">
+      <div class="detail-emoji" id="detail-emoji"></div>
+      <h2 class="detail-title" id="detail-title"></h2>
+      <div id="detail-badge"></div>
+      <div class="detail-meta" id="detail-meta"></div>
+    </div>
+    <div class="detail-body">
+      <p class="detail-section-label">Where to go</p>
+      <div class="location-list" id="location-list"></div>
+    </div>
+  </div>
+
+  <script>
+    /* ═══════════════════════════════════════════════════════
+       ACTIVITY DATA
+       ═══════════════════════════════════════════════════════ */
+    const activities = [
+
+      /* ── 1–3 Hours ─────────────────────────────────────── */
+      {
+        id: 'comedy-show',
+        title: 'Friday Night Comedy Show',
+        description: 'Catch touring stand-up comedians at one of Boise\'s intimate comedy venues. Shows run most Friday and Saturday nights — reserve tickets online in advance.',
+        emoji: '🎤',
+        category: 'Theater & Shows',
+        timeBlock: '1-3 Hours',
+        distance: 'In Boise',
+        duration: '~2 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Funny Bone Boise', desc: 'National touring acts in a dedicated comedy club near Boise Towne Square. Two-drink minimum, reserved seating.' },
+          { name: 'The Linen Building', desc: 'Downtown event space that hosts occasional themed comedy nights and improv shows.' },
+          { name: 'Liquid Nightclub', desc: 'Downtown Boise venue with regular stand-up and open-mic comedy on weekend nights.' },
+          { name: 'Pengilly\'s Saloon', desc: 'Historic bar on Main Street with occasional comedy and live entertainment nights.' }
+        ]
+      },
+      {
+        id: 'karaoke',
+        title: 'Night at a Karaoke Bar',
+        description: 'Belt your heart out at one of Boise\'s lively karaoke spots. A low-key, hilarious way to spend a weeknight or weekend evening with friends.',
+        emoji: '🎵',
+        category: 'Entertainment',
+        timeBlock: '1-3 Hours',
+        distance: 'In Boise',
+        duration: '2–3 hrs',
+        effort: 1,
+        locations: [
+          { name: 'HopScotch', desc: 'Popular downtown bar with a full karaoke setup on Friday and Saturday nights. Large song library, good cocktails.' },
+          { name: 'Reef', desc: 'Laid-back neighborhood bar in Hyde Park with regular karaoke nights and a friendly local crowd.' },
+          { name: 'The Bouquet', desc: 'Cozy dive bar on 8th Street with nightly karaoke and a no-frills atmosphere — the real deal.' },
+          { name: 'Liquid Lounge', desc: 'Downtown venue with karaoke on select nights, multiple rooms, and a dance floor to follow.' }
+        ]
+      },
+      {
+        id: 'botanical-garden',
+        title: 'Morning at the Botanical Garden',
+        description: 'The Idaho Botanical Garden near the Old Pen offers seasonal blooms, sculpture walks, and peaceful paths. Best in spring and summer.',
+        emoji: '🌿',
+        category: 'Walks',
+        timeBlock: '1-3 Hours',
+        distance: '~5 min',
+        duration: '1–2 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Idaho Botanical Garden', desc: 'Main garden at 2355 N Old Penitentiary Rd. Features themed gardens, sculpture trail, and native plant collections. Small admission fee.' },
+          { name: 'Old Idaho Penitentiary Grounds', desc: 'Adjacent historic prison campus with gardens and rose collections on the grounds — free to walk around the exterior.' },
+          { name: 'Warm Springs Avenue Greenbelt', desc: 'Leafy riverside trail just downhill from the garden. Connects to the broader Greenbelt system heading west into downtown.' }
+        ]
+      },
+      {
+        id: 'greenbelt-birdwatch',
+        title: 'Birdwatching on the Greenbelt',
+        description: 'The Boise River Greenbelt is a prime urban birding corridor with herons, osprey, mergansers, and songbirds year-round. Barber Park to the zoo stretch is especially productive.',
+        emoji: '🐦',
+        category: 'Birdwatching',
+        timeBlock: '1-3 Hours',
+        distance: 'In Boise',
+        duration: '1–3 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Kathryn Albertson Park', desc: 'Closed-access habitat reserve near Americana Blvd. Excellent for waterfowl, great blue herons, and migrating warblers. Walking path along the perimeter.' },
+          { name: 'Barber Park to Discovery Park stretch', desc: 'The most productive urban stretch — osprey nesting platforms, wood duck boxes, and kingfisher activity along the river.' },
+          { name: 'Veterans Memorial Park', desc: 'Open lawn and mature trees along the Greenbelt near the Ann Morrison Park area. Good for raptors and passing migrants in spring.' },
+          { name: 'Julia Davis Park', desc: 'Central park adjacent to the zoo. Large cottonwoods attract warblers and vireos during spring migration.' }
+        ]
+      },
+      {
+        id: 'boise-river-float',
+        title: 'Float the Boise River',
+        description: 'Rent a tube at Barber Park and lazily float downstream to Ann Morrison Park. A beloved Boise summer tradition that takes 1.5–2 hours.',
+        emoji: '🛶',
+        category: 'Outdoors',
+        timeBlock: '1-3 Hours',
+        distance: '~10 min',
+        duration: '1.5–2 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Barber Park (Launch)', desc: 'Official launch point at 2101 S Eckert Rd. Tube and life jacket rentals available on-site. Free shuttle from Ann Morrison runs Memorial Day through Labor Day.' },
+          { name: 'Ann Morrison Park (Takeout)', desc: 'Standard takeout point along Americana Blvd. Shuttle departs from here back to Barber. Restrooms and ample parking.' },
+          { name: 'Whitewater Park (Advanced)', desc: 'Boise\'s whitewater park near Americana Blvd offers additional river access for kayakers and experienced floaters.' }
+        ]
+      },
+
+      /* ── Half Day ───────────────────────────────────────── */
+      {
+        id: 'birds-of-prey',
+        title: 'Snake River Birds of Prey NCA',
+        description: 'The Snake River Canyon south of Boise hosts one of the world\'s densest concentrations of nesting raptors. Hawks, falcons, golden eagles, and owls are all possible spring through summer.',
+        emoji: '🦅',
+        category: 'Birdwatching',
+        timeBlock: 'Half Day',
+        distance: '~30 min south',
+        duration: '3–5 hrs',
+        effort: 2,
+        locations: [
+          { name: 'Dedication Point Overlook', desc: 'The premier viewpoint into the Snake River Canyon. Pull-off on Kuna Rd gives sweeping views of nesting ledges where prairie falcons and golden eagles are frequently spotted.' },
+          { name: 'Swan Falls Dam', desc: 'Southern end of the NCA on the Snake River. Historic 1901 hydroelectric dam with good raptor viewing from the road and riverside trail.' },
+          { name: 'Kuna Caves', desc: 'Lava tube system east of Kuna. Look for barn owls and white-throated swifts near the cave entrances in spring and summer.' },
+          { name: 'Snake River Rd pullouts', desc: 'Several informal roadside pullouts along the canyon rim offer undisturbed views of perched raptors on basalt columns below.' }
+        ]
+      },
+      {
+        id: 'sunnyslope-wine',
+        title: 'Sunnyslope Wine Trail',
+        description: 'Idaho\'s wine country is just 40 minutes west. Explore a handful of award-winning wineries along the Snake River, many with stunning canyon views.',
+        emoji: '🍷',
+        category: 'Wine & Food',
+        timeBlock: 'Half Day',
+        distance: '~40 min west',
+        duration: '3–5 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Cinder Winery', desc: 'Caldwell-based producer known for bold Tempranillo and crisp Viognier. Intimate tasting room; one of Idaho\'s most acclaimed labels.' },
+          { name: 'Huston Vineyards', desc: 'Family estate on the Snake River AVA with Syrah, Barbera, and Cabernet Franc. Beautiful views of the canyon from the tasting room deck.' },
+          { name: 'Telaya Wine Co', desc: 'Garden City tasting room just outside Boise on the river. Large outdoor patio and food-friendly pours make it a great first stop.' },
+          { name: 'Sawtooth Winery', desc: 'Nampa estate with one of the largest vineyard footprints in Idaho. Good for a long afternoon with a picnic on the grounds.' },
+          { name: 'Indian Creek Winery', desc: 'Idaho\'s oldest winery in Kuna. Unpretentious, historic, and worth the short detour off the main trail.' }
+        ]
+      },
+      {
+        id: 'idaho-city',
+        title: 'Idaho City & Warm Springs',
+        description: 'A historic gold-rush town tucked in the Boise foothills, with well-preserved 1860s buildings. Combine with a soak at Kirkham Hot Springs on the way back.',
+        emoji: '♨️',
+        category: 'Day Trips',
+        timeBlock: 'Half Day',
+        distance: '~45 min NE',
+        duration: '4–6 hrs',
+        effort: 1,
+        locations: [
+          { name: 'Idaho City Historic District', desc: 'Main Street area with Gold Rush-era storefronts, the original county courthouse, and the Boot Hill cemetery just up the hill.' },
+          { name: 'Kirkham Hot Springs', desc: 'Multiple hot spring pools along the Payette River on Hwy 21. Best visited on weekdays — gets crowded on summer weekends. Free.' },
+          { name: 'Boiling Springs', desc: 'More remote hot springs further up Hwy 21 near Grandjean. Requires a short hike and rewards with solitude and spectacular scenery.' },
+          { name: 'Mores Creek', desc: 'Roadside picnic areas and trout fishing access along Hwy 21 just south of Idaho City. Great for a quick streamside break.' }
+        ]
+      },
+      {
+        id: 'rock-climbing',
+        title: 'Rock Climbing at Table Rock',
+        description: 'The basalt crags just east of downtown Boise offer sport and trad climbing with city views. Great for beginners and seasoned climbers alike.',
+        emoji: '🧗',
+        category: 'Outdoors',
+        timeBlock: 'Half Day',
+        distance: '~15 min',
+        duration: '3–4 hrs',
+        effort: 3,
+        locations: [
+          { name: 'Table Rock', desc: 'The iconic flat-topped butte east of downtown with basalt sport and trad routes. Panoramic city and mountain views from the top. Hike-in access from the trailhead off Shaw Mountain Rd.' },
+          { name: 'Rocks of Sharon', desc: 'Granite bouldering area near Lucky Peak Reservoir. Good variety of problems from V0 to V6 in a quieter setting.' },
+          { name: 'Idaho Mountain Guides', desc: 'Local guide service and gear shop offering instruction for beginners and clinic days at local crags. Great starting point if you\'re new to climbing.' }
+        ]
+      },
+
+      /* ── Full Day ───────────────────────────────────────── */
+      {
+        id: 'sun-valley-day',
+        title: 'Day Trip to Sun Valley',
+        description: 'Drive northeast through the stunning Wood River Valley to the resort town of Sun Valley. Shop Ketchum, hike Bald Mountain, or just soak up the mountain scenery.',
+        emoji: '⛰️',
+        category: 'Day Trips',
+        timeBlock: 'Full Day',
+        distance: '~2.5 hrs NE',
+        duration: 'Full day',
+        effort: 1,
+        locations: [
+          { name: 'Ketchum Main Street', desc: 'Galleries, boutiques, and excellent restaurants in a compact walkable downtown. The Ketchum Grill and Rickshaw are local favorites for lunch.' },
+          { name: 'Bald Mountain Gondola', desc: 'Summer gondola rides to the summit give stunning views of the Sawtooth foothills. Hiking trails available at the top.' },
+          { name: 'Sun Valley Resort Village', desc: 'Year-round ice skating rink, outdoor dining, and the Sun Valley Lodge — worth a peek inside the storied lobby.' },
+          { name: 'Ernest Hemingway Memorial', desc: 'Quiet memorial on Trail Creek, a short drive from downtown Ketchum. Hemingway spent his final years here and is buried in the Ketchum Cemetery nearby.' },
+          { name: 'SNRA Visitor Center', desc: 'Sawtooth National Recreation Area visitor center north of Ketchum. Excellent introduction to the mountains with free exhibits and trail maps.' }
+        ]
+      },
+      {
+        id: 'shakespeare-garden',
+        title: 'Idaho Shakespeare Festival',
+        description: 'Catch an evening performance at the Idaho Shakespeare Festival\'s stunning outdoor amphitheater, then picnic at the adjacent Botanical Garden beforehand.',
+        emoji: '🎭',
+        category: 'Theater & Shows',
+        timeBlock: 'Full Day',
+        distance: '~10 min',
+        duration: 'All evening',
+        effort: 1,
+        locations: [
+          { name: 'Idaho Shakespeare Festival Amphitheater', desc: 'Outdoor riverside venue at 5657 Warm Springs Ave. Season runs June–September with Shakespeare and contemporary productions. Gates open 2 hours before curtain.' },
+          { name: 'Idaho Botanical Garden (Pre-show)', desc: 'Adjacent to the amphitheater — the garden is the ideal pre-show picnic spot. Bring a blanket and a bottle and arrive early.' }
+        ]
+      },
+      {
+        id: 'bogus-basin',
+        title: 'Mountain Biking at Bogus Basin',
+        description: 'Just 45 minutes north, Bogus Basin transforms into a mountain biking mecca in summer. Lift-served trails and cross-country routes for all skill levels.',
+        emoji: '🚵',
+        category: 'Outdoors',
+        timeBlock: 'Full Day',
+        distance: '~45 min north',
+        duration: '5–8 hrs',
+        effort: 3,
+        locations: [
+          { name: 'Bogus Basin Main Lodge', desc: 'Base area with bike rentals, a café, and trail maps. The lift runs on weekends in summer — buy a day pass for uphill access.' },
+          { name: 'Deer Point Summit', desc: 'Top of the main lift. Starting point for the most rewarding descents and cross-country loops through alpine terrain.' },
+          { name: 'Nordic Center Trails', desc: 'Groomed cross-country system in winter, open in summer for intermediate mountain biking and hiking. Less crowded than the lift-served runs.' }
+        ]
+      },
+
+      /* ── Weekend ─────────────────────────────────────────── */
+      {
+        id: 'mccall-weekend',
+        title: 'McCall Weekend',
+        description: 'Head north to Payette Lake for a classic Idaho mountain town weekend. Kayaking, hiking, great restaurants, and the famous Brewery at St. Andrews golf course.',
+        emoji: '🏔️',
+        category: 'Outdoors',
+        timeBlock: 'Weekend',
+        distance: '~2 hrs north',
+        duration: '2 days',
+        effort: 2,
+        locations: [
+          { name: 'Shore Lodge', desc: 'Lakeside resort on Payette Lake. Restaurant, spa, and stunning sunset views from the bar. Book rooms well in advance for summer weekends.' },
+          { name: 'Payette Lake Beach', desc: 'Downtown McCall\'s public beach and marina. Kayak and paddleboard rentals on-site. Best swimming in the area.' },
+          { name: 'Ponderosa State Park', desc: 'Peninsula park extending into Payette Lake. Hiking trails through old-growth ponderosa pines with incredible lake views. Small day-use fee.' },
+          { name: 'Brundage Mountain', desc: 'Summer hiking and mountain biking a few miles north of town. Scenic chairlift rides to the summit on weekends.' },
+          { name: 'Salmon River Brewing', desc: 'Downtown McCall\'s beloved brewpub. Solid burgers, local beers on tap, and a lively patio — the de facto gathering spot.' }
+        ]
+      },
+      {
+        id: 'jackson-hole',
+        title: 'Jackson Hole Weekend',
+        description: 'Cross into Wyoming for a weekend of Teton grandeur. Walk the antler arches on Town Square, bike the pathway system, and watch wildlife in the national elk refuge.',
+        emoji: '🦌',
+        category: 'Day Trips',
+        timeBlock: 'Weekend',
+        distance: '~5 hrs east',
+        duration: '2 days',
+        effort: 2,
+        locations: [
+          { name: 'Town Square Antler Arches', desc: 'Jackson\'s iconic central square framed by four arches made of naturally shed elk antlers. Great photo, great starting point for exploring downtown shops and restaurants.' },
+          { name: 'National Elk Refuge', desc: 'Year-round wildlife viewing off Hwy 26. In summer, bison and pronghorn graze the flats; in winter, horse-drawn sleigh rides through the elk herd.' },
+          { name: 'Teton Village Gondola', desc: 'Base of Jackson Hole Mountain Resort. Summer gondola to the summit (10,450 ft) with epic Teton views and hiking trails at the top.' },
+          { name: 'Snake River Brewing', desc: 'Jackson\'s award-winning brewpub. Reliably great food and beers; expect a wait on weekends but worth it.' },
+          { name: 'National Museum of Wildlife Art', desc: 'World-class museum on North US-89 with panoramic Elk Refuge views. Surprisingly excellent permanent collection — don\'t skip it.' }
+        ]
+      },
+
+      /* ── 3-Day Weekend ───────────────────────────────────── */
+      {
+        id: 'vegas-show',
+        title: 'Las Vegas Show Weekend',
+        description: 'Fly to Las Vegas for a long weekend of world-class theater, Cirque du Soleil, residency concerts, or Broadway touring productions — all within a short flight.',
+        emoji: '🎰',
+        category: 'Theater & Shows',
+        timeBlock: '3-Day Weekend',
+        distance: '~1 hr flight',
+        duration: '3 days',
+        effort: 1,
+        locations: [
+          { name: 'The Smith Center for the Performing Arts', desc: 'Downtown Arts District venue with Broadway touring productions, symphony, and ballet. The premier performing arts destination on the Strip corridor.' },
+          { name: 'Colosseum at Caesars Palace', desc: 'Intimate 4,300-seat residency venue that has hosted Celine Dion, Adele, and major pop residencies. Best seats in the house for big names.' },
+          { name: 'Park Theater at Park MGM', desc: 'Mid-size residency and touring venue in the Park MGM. Good sightlines, varied programming, and one of the better concert experiences in Vegas.' },
+          { name: 'The Venetian Theatre', desc: 'Boutique 1,800-seat theater inside The Venetian. Consistently hosts high-quality residency acts in an intimate setting.' },
+          { name: 'Allegiant Stadium', desc: 'For arena-scale concerts and major touring acts. The Raiders stadium doubles as one of the best large concert venues in the country.' }
+        ]
+      },
+      {
+        id: 'portland-weekend',
+        title: 'Portland Weekend',
+        description: 'Drive or fly west for a long weekend in Portland — Powell\'s Books, the Pearl District, food cart culture, and easy day trips to the coast or Columbia Gorge.',
+        emoji: '🌲',
+        category: 'Day Trips',
+        timeBlock: '3-Day Weekend',
+        distance: '~7 hrs or fly',
+        duration: '3 days',
+        effort: 1,
+        locations: [
+          { name: 'Powell\'s City of Books', desc: 'A full city block of new and used books on W Burnside. The rare bookroom alone is worth the trip. Open daily — budget at least an hour.' },
+          { name: 'Arlene Schnitzer Concert Hall', desc: 'Portland\'s premier downtown concert hall. Home of the Oregon Symphony and hosts Broadway touring productions.' },
+          { name: 'Mississippi Studios', desc: 'Intimate indie music venue on N Mississippi Ave. Consistently great booking across folk, rock, and experimental genres.' },
+          { name: 'Crystal Ballroom', desc: 'Iconic W Burnside ballroom with a "floating" sprung floor. Legendary venue for mid-size touring acts. Great acoustics, great vibes.' },
+          { name: 'Cannon Beach (Day Trip)', desc: 'One hour west on Hwy 26. Haystack Rock tidal pools, galleries, and the Pacific — add this as your third-day excursion.' }
+        ]
+      },
+
+      /* ── Full Week ───────────────────────────────────────── */
+      {
+        id: 'yellowstone',
+        title: 'Yellowstone & Grand Teton',
+        description: 'One of America\'s most iconic road trips. Spend a full week looping through Grand Teton and Yellowstone — geysers, wildlife, hot springs, and unforgettable mountain scenery.',
+        emoji: '🌋',
+        category: 'Outdoors',
+        timeBlock: 'Full Week',
+        distance: '~6–8 hrs east',
+        duration: '5–7 days',
+        effort: 2,
+        locations: [
+          { name: 'Old Faithful & Upper Geyser Basin', desc: 'Yellowstone\'s most visited spot — the geyser erupts every ~90 minutes. The basin boardwalk loop passes a dozen other active geysers.' },
+          { name: 'Grand Prismatic Spring', desc: 'Midway Geyser Basin. The most photographed thermal feature in the park — vivid rainbow rings best seen from the overlook trail above.' },
+          { name: 'Lamar Valley', desc: 'The northeast corner of Yellowstone. Best place in the park for wolf sightings, bison herds, and grizzly bears. Pull over anywhere at dawn or dusk.' },
+          { name: 'Jenny Lake (Grand Teton)', desc: 'The crown jewel of Grand Teton NP. Boat shuttle to the west shore, then hike to Hidden Falls and Inspiration Point. One of the best half-days in the region.' },
+          { name: 'Mammoth Hot Springs Terraces', desc: 'Northern Yellowstone. Otherworldly layered limestone terraces formed by thermal springs. Drive the one-way loop or walk the boardwalks.' }
+        ]
+      },
+      {
+        id: 'pacific-coast',
+        title: 'Pacific Coast Highway Road Trip',
+        description: 'Drive west to the Oregon and Northern California coast for a week of dramatic sea stacks, redwood forests, lighthouse walks, and fresh Dungeness crab.',
+        emoji: '🌊',
+        category: 'Day Trips',
+        timeBlock: 'Full Week',
+        distance: 'Drive west',
+        duration: '7 days',
+        effort: 2,
+        locations: [
+          { name: 'Astoria, OR', desc: 'Start here at the mouth of the Columbia River. Climb the Astoria Column for panoramic views, then cross the bridge into Washington if time allows.' },
+          { name: 'Cannon Beach, OR', desc: 'Haystack Rock, tidal pool walks, and art galleries. One of the most dramatic and walkable beach towns on the Oregon coast.' },
+          { name: 'Pacific City, OR', desc: 'Second Haystack Rock (Cape Kiwanda), sand dunes to climb, and the Pelican Brewing Pub right on the beach. A highlight of the Oregon coast.' },
+          { name: 'Crater Lake National Park (Detour)', desc: 'Inland detour on the return through southern Oregon. The deepest lake in the US, filled with impossibly blue water inside a collapsed volcano. Not to be missed.' },
+          { name: 'Redwood National Park, CA', desc: 'Northern California old-growth coast redwoods. The Avenue of the Giants drive through Humboldt Redwoods is an alternative to the park if short on time.' }
+        ]
+      }
+    ];
+
+    /* ═══════════════════════════════════════════════════════
+       ANNUAL EVENTS DATA
+       ═══════════════════════════════════════════════════════ */
+    const annualEvents = [
+      {
+        month: 'January',
+        sortMonth: 1,
+        name: 'McCall Winter Carnival',
+        location: 'McCall, ID',
+        details: 'Snow sculptures, fireworks, Mardi Gras parade & bonfire; runs ~10 days late Jan into Feb.',
+        category: 'Outdoors'
+      },
+      {
+        month: 'March',
+        sortMonth: 3,
+        name: 'Treefort Music Fest',
+        location: 'Downtown Boise',
+        details: '5-day indie & alternative festival with 200+ acts across venues throughout downtown.',
+        category: 'Entertainment'
+      },
+      {
+        month: 'April',
+        sortMonth: 4,
+        name: 'Snake River Raptor Spring Hawk Watch',
+        location: 'NCA — 30 mi south',
+        details: 'Peak raptor migration & nesting season at the Birds of Prey NCA. BLM-guided hikes available.',
+        category: 'Birdwatching'
+      },
+      {
+        month: 'June',
+        sortMonth: 6,
+        name: 'Idaho Shakespeare Festival Opens',
+        location: 'Boise',
+        details: 'Outdoor amphitheater season runs June through September with Shakespeare and contemporary productions.',
+        category: 'Theater & Shows'
+      },
+      {
+        month: 'July',
+        sortMonth: 7,
+        name: 'Fourth of July Fireworks',
+        location: 'Ann Morrison Park',
+        details: 'Boise\'s big fireworks show over the river. Arrive early for a prime lawn spot.',
+        category: 'Entertainment'
+      },
+      {
+        month: 'August',
+        sortMonth: 8,
+        name: 'Spirit of Boise Balloon Classic',
+        location: 'Ann Morrison Park',
+        details: 'Hot-air balloons launch at dawn for several days in late August. Mass ascensions are free to watch.',
+        category: 'Outdoors'
+      },
+      {
+        month: 'September',
+        sortMonth: 9,
+        name: 'Boise Pride Festival',
+        location: 'Julia Davis Park',
+        details: 'Live music, drag performances, food, and community celebration over a full weekend.',
+        category: 'Entertainment'
+      },
+      {
+        month: 'October',
+        sortMonth: 10,
+        name: 'Sun Valley Jazz & Music Festival',
+        location: 'Sun Valley, ID',
+        details: 'Four-day festival of jazz, ragtime, and swing in one of Idaho\'s most beautiful settings. Mid-October.',
+        category: 'Theater & Shows'
+      },
+      {
+        month: 'November',
+        sortMonth: 11,
+        name: 'Holiday Parade of Lights',
+        location: 'Downtown Boise',
+        details: 'Lighted floats and marching bands kick off the holiday season. Free community event on a Friday evening.',
+        category: 'Entertainment'
+      }
+    ];
+
+    /* ═══════════════════════════════════════════════════════
+       HELPERS
+       ═══════════════════════════════════════════════════════ */
+    const categoryClass = {
+      'Birdwatching':    'badge-birdwatching',
+      'Theater & Shows': 'badge-theater',
+      'Walks':           'badge-walks',
+      'Day Trips':       'badge-daytrips',
+      'Entertainment':   'badge-entertainment',
+      'Outdoors':        'badge-outdoors',
+      'Wine & Food':     'badge-winefood'
+    };
+
+    function effortDots(level) {
+      return [1,2,3].map(i => i <= level ? '●' : '○').join('');
+    }
+
+    function effortLabel(level) {
+      return ['', 'Low', 'Moderate', 'High'][level];
+    }
+
+    function cardHTML(a) {
+      const badgeClass = categoryClass[a.category] || 'badge-entertainment';
+      return `
+        <article class="card" data-id="${a.id}" role="button" tabindex="0" aria-label="View locations for ${a.title}">
+          <div class="card-top">
+            <span class="card-emoji" aria-hidden="true">${a.emoji}</span>
+            <div class="card-meta-top">
+              <span class="category-badge ${badgeClass}">${a.category}</span>
+              <span class="effort-dots" title="Effort: ${effortLabel(a.effort)}">${effortDots(a.effort)}</span>
+            </div>
+          </div>
+          <h3 class="card-title">${a.title}</h3>
+          <p class="card-desc">${a.description}</p>
+          <div class="card-footer">
+            <span class="card-stat">📍 ${a.distance}</span>
+            <span class="card-stat">⏱ ${a.duration}</span>
+          </div>
+        </article>`;
+    }
+
+    function emptyState() {
+      return `<p class="empty-state">No activities in this category for this time block.</p>`;
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RENDER ACTIVITIES
+       ═══════════════════════════════════════════════════════ */
+    function render(filterCategory = 'All') {
+      document.querySelectorAll('.time-block').forEach(section => {
+        const block = section.dataset.block;
+        const grid = section.querySelector('.card-grid');
+        const filtered = activities.filter(a =>
+          a.timeBlock === block &&
+          (filterCategory === 'All' || a.category === filterCategory)
+        );
+        grid.innerHTML = filtered.length
+          ? filtered.map(cardHTML).join('')
+          : emptyState();
+      });
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       RENDER ANNUAL EVENTS
+       ═══════════════════════════════════════════════════════ */
+    function renderAnnualEvents() {
+      const sorted = [...annualEvents].sort((a, b) => a.sortMonth - b.sortMonth);
+      const tbody = document.getElementById('annual-events-body');
+      tbody.innerHTML = sorted.map(ev => {
+        const badgeClass = categoryClass[ev.category] || 'badge-entertainment';
+        return `
+          <tr>
+            <td><span class="event-month">${ev.month}</span></td>
+            <td>
+              <div class="event-name">${ev.name}</div>
+              <div class="event-details">${ev.details}</div>
+              <span class="category-badge event-category-badge ${badgeClass}">${ev.category}</span>
+            </td>
+            <td><span class="event-location">${ev.location}</span></td>
+          </tr>`;
+      }).join('');
+    }
+
+    /* ═══════════════════════════════════════════════════════
+       DETAIL SCREEN
+       ═══════════════════════════════════════════════════════ */
+    const detailScreen = document.getElementById('detail-screen');
+    let savedScrollY = 0;
+
+    function showDetail(id) {
+      const activity = activities.find(a => a.id === id);
+      if (!activity) return;
+
+      const badgeClass = categoryClass[activity.category] || 'badge-entertainment';
+
+      document.getElementById('detail-header-title').textContent = activity.title;
+      document.getElementById('detail-emoji').textContent = activity.emoji;
+      document.getElementById('detail-title').textContent = activity.title;
+      document.getElementById('detail-badge').innerHTML =
+        `<span class="category-badge ${badgeClass}" style="margin-top:0.625rem;display:inline-block">${activity.category}</span>`;
+      document.getElementById('detail-meta').innerHTML =
+        `<span class="detail-meta-item">📍 ${activity.distance}</span>
+         <span class="detail-meta-item">⏱ ${activity.duration}</span>
+         <span class="detail-meta-item" title="Effort: ${effortLabel(activity.effort)}">${effortDots(activity.effort)} ${effortLabel(activity.effort)}</span>`;
+
+      document.getElementById('location-list').innerHTML = activity.locations.map((loc, i) => `
+        <div class="location-card">
+          <span class="location-number">${i + 1}</span>
+          <div class="location-info">
+            <div class="location-name">${loc.name}</div>
+            <div class="location-desc">${loc.desc}</div>
+          </div>
+        </div>`).join('');
+
+      savedScrollY = window.scrollY;
+      detailScreen.classList.add('active');
+      detailScreen.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideDetail() {
+      detailScreen.classList.remove('active');
+      document.body.style.overflow = '';
+      window.scrollTo(0, savedScrollY);
+    }
+
+    document.getElementById('detail-back').addEventListener('click', hideDetail);
+
+    detailScreen.addEventListener('keydown', e => {
+      if (e.key === 'Escape') hideDetail();
+    });
+
+    // Delegate card clicks (cards are re-rendered on filter change)
+    document.addEventListener('click', e => {
+      const card = e.target.closest('.card[data-id]');
+      if (card) showDetail(card.dataset.id);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const card = e.target.closest('.card[data-id]');
+        if (card) { e.preventDefault(); showDetail(card.dataset.id); }
+      }
+    });
+
+    /* ═══════════════════════════════════════════════════════
+       FILTER PILLS
+       ═══════════════════════════════════════════════════════ */
+    let activeFilter = 'All';
+
+    document.querySelectorAll('.filter-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        activeFilter = pill.dataset.filter;
+        document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        render(activeFilter);
+      });
+    });
+
+    /* ═══════════════════════════════════════════════════════
+       STICKY HEADER + ACTIVE NAV
+       ═══════════════════════════════════════════════════════ */
+    const header = document.getElementById('site-header');
+    const navLinks = document.querySelectorAll('.site-nav a');
+    const sections = document.querySelectorAll('[id]');
+
+    // Header shadow on scroll
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    // Active nav highlight via IntersectionObserver
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
+        }
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+
+    /* ═══════════════════════════════════════════════════════
+       INIT
+       ═══════════════════════════════════════════════════════ */
+    render();
+    renderAnnualEvents();
+  </script>
+</body>
+</html>
