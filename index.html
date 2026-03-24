@@ -893,6 +893,7 @@
       detailScreen.classList.add('active');
       detailScreen.scrollTop = 0;
       document.body.style.overflow = 'hidden';
+      history.pushState({ detail: id }, '');
     }
 
     function hideDetail() {
@@ -901,7 +902,13 @@
       window.scrollTo(0, savedScrollY);
     }
 
-    document.getElementById('detail-back').addEventListener('click', hideDetail);
+    window.addEventListener('popstate', () => {
+      if (detailScreen.classList.contains('active')) hideDetail();
+    });
+
+    document.getElementById('detail-back').addEventListener('click', () => {
+      history.back();
+    });
 
     detailScreen.addEventListener('keydown', e => {
       if (e.key === 'Escape') hideDetail();
